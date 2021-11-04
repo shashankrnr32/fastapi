@@ -384,6 +384,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.get(
             path,
@@ -408,6 +409,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def put(
@@ -435,6 +437,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.put(
             path,
@@ -459,6 +462,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def post(
@@ -486,6 +490,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.post(
             path,
@@ -510,6 +515,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def delete(
@@ -537,6 +543,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.delete(
             path,
@@ -561,6 +568,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def options(
@@ -588,6 +596,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.options(
             path,
@@ -612,6 +621,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def head(
@@ -639,6 +649,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.head(
             path,
@@ -663,6 +674,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def patch(
@@ -690,6 +702,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.patch(
             path,
@@ -714,6 +727,7 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
 
     def trace(
@@ -741,6 +755,7 @@ class FastAPI(Starlette):
         name: Optional[str] = None,
         callbacks: Optional[List[BaseRoute]] = None,
         openapi_extra: Optional[Dict[str, Any]] = None,
+        config: Optional[Dict[str, Any]] = None,
     ) -> Callable[[DecoratedCallable], DecoratedCallable]:
         return self.router.trace(
             path,
@@ -765,4 +780,5 @@ class FastAPI(Starlette):
             name=name,
             callbacks=callbacks,
             openapi_extra=openapi_extra,
+            config=config,
         )
